@@ -1,0 +1,11 @@
+.table {
+    border-collapse: collapse; 
+    width: 100%;
+    margin-top: 20px;
+  }
+  .table_main {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid gray;
+  }

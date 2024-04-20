@@ -1,0 +1,16 @@
+.table-row {
+    background-color: #f0f0f0; /* Background color for even rows */
+  }
+  
+  .table-row:nth-child(odd) {
+    background-color: #ffffff; /* Background color for odd rows */
+  }
+  
+  .table-row:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+  }
+  
+  /* TableCell.css */
+  .table-cell {
+    padding: 8px; /* Adjust padding as needed */
+  }

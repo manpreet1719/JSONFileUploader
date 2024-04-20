@@ -1,0 +1,5 @@
+.table-header-cell {
+    padding-right: 15px; /* Adjust padding as needed */
+    font-weight: bold; /* Make header cells bold */
+    text-align: left;
+  }

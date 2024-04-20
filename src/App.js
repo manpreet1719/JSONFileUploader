@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import {useState } from 'react';
 import './App.css';
+import FileUploder from './component/FileUploder.js'
+import Table from './component/Table.js';
+
 
 function App() {
+  const [jsonData, setJsonData] = useState([]);
+
+  const handleJsonDataChange = (data) => {
+    setJsonData(data);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>JSON File Uploader</h1>
+      <FileUploder className="fileuploder" onJsonDataChange={handleJsonDataChange} />
+
+      {
+        jsonData.length > 0
+          ? <Table
+            data={jsonData}
+            searchable
+            sortable
+          /> : null
+      }
+
     </div>
   );
 }
